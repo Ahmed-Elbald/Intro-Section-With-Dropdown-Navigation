@@ -139,7 +139,7 @@ nav.menu-container button.close-menu {
   background-color: transparent;
 }
 
-nav.menu-container ul.links {
+nav.menu-container .links {
   margin-bottom: 2em;
   color: var(--medium-gray);
 }
@@ -167,109 +167,118 @@ nav.menu-container ul.links {
   }
 }
 
-nav.menu-container ul.links .title,
-nav.menu-container ul.links > li {
-  padding: .3em;
+nav.menu-container .links .title,
+nav.menu-container .links > li {
+  padding: .4em;
   transition-duration: .5s;
   cursor: pointer;
 }
 
-nav.menu-container ul.links .title:hover,
-nav.menu-container ul.links > li:hover {
+nav.menu-container .links > .separate-ul li {
+  padding: .4em;
+}
+
+nav.menu-container .links .title:hover,
+nav.menu-container .links > li:hover {
   color: black;
 }
 
-nav.menu-container ul.links .list-container .title {
+nav.menu-container .links .list-container .title {
   display: flex;
   align-items: center;
   gap: .5em;
 }
 
-nav.menu-container ul.links .title svg {
+nav.menu-container .links .title svg {
   transition-duration: .5s;
 }
 
-nav.menu-container ul.links .title svg.up-down {
+nav.menu-container .links .title svg.up-down {
   transform: rotate(180deg);
 }
 
-nav.menu-container ul.links .list-container .list {
+nav.menu-container .links .list-container .list {
   overflow: hidden;
   max-height: 0;
   transition-duration: .5s;
 }
 
-nav.menu-container ul.links .list-container .list.expanding {
+nav.menu-container .links .list-container .list.expanding {
   padding: 1em;
 }
 
-nav.menu-container ul.links .list-container.expanding .list {
+nav.menu-container .links .list-container.expanding .list {
   max-height: 1000px;
 }
 
-nav.menu-container ul.links .list-container .list li {
+nav.menu-container .links .list-container .list li {
   padding: 0.2em;
   margin-bottom: 0.3em;
   transition-duration: .5s;
 }
 
-nav.menu-container ul.links .list-container .list li img {
+nav.menu-container .links .list-container .list li img {
   margin-right: .5em;
 }
 
-nav.menu-container ul.links .list-container .list li:hover {
+nav.menu-container .links li:hover {
   color: var(--black);
 }
 
-nav.menu-container ul.signing button {
+nav.menu-container .signing a {
+  display: block;
   background-color: transparent;
-  color: var(--medium-gray);
-  padding-top: .5em;
-  padding-bottom: .7em;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--medium-gray); 
+  padding: .3em .7em;
   margin-bottom: .7em;
   width: 100%;
 }
 
-nav.menu-container ul.signing button a {
-  text-transform: capitalize;
-}
-
-nav.menu-container ul.signing button.register {
-  border: 1px solid var(--medium-gray);
+nav.menu-container .signing a.register {
+  border: 2px solid var(--medium-gray);
   border-radius: 10px;
   transition-duration: .5s;
 }
 
-nav.menu-container ul.signing button:hover {
+nav.menu-container .signing a:hover {
   border-color: var(--black);
   color: var(--black);
 }
 
 @media (min-width: 800px) {
-  nav.menu-container ul.links .list-container {
+  nav.menu-container .links .list-container {
     position: relative;
   }
 
-  nav.menu-container ul.links .list-container .list {
+  nav.menu-container .links .list-container .list {
     position: absolute;
     width: max-content;
-    top: calc(100% + .5em);
+    top: calc(100% + .4em);
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px -2px hsl(0deg 0% 55%);
   }
 
-  nav.menu-container ul.links .list-container.left .list {
+  nav.menu-container .links .list-container.left .list {
     left: 0;
   }
 
-  nav.menu-container ul.links .list-container.right .list {
+  nav.menu-container .links .list-container.right .list {
     right: 0;
   }
 
-  nav.menu-container ul.signing button {
+  nav.menu-container .signing a {
     margin-bottom: 0;
-    padding: .7em;
+    /* padding: .7em; */
+  }
+
+
+  nav.menu-container .separate-ul {
+    display: flex;
+    gap: 1em;
+    align-items: center;
   }
 }
 
@@ -334,7 +343,7 @@ main .container .main-text p {
   font-weight: 500;
 }
 
-main .container .main-text button {
+main .container .main-text a {
   padding: 1em 2em;
   color: white;
   background-color: var(--black);
@@ -344,7 +353,7 @@ main .container .main-text button {
   transition-duration: .5s;
 }
 
-main .container .main-text button:hover {
+main .container .main-text a:hover {
   background-color: white;
   color: var(--black);
   border-color: var(--black)

@@ -5,7 +5,7 @@ const openMenuBtn = document.querySelector("button.open-menu");
 const closeMenuBtn = document.querySelector("button.close-menu");
 const menu = document.querySelector("nav.menu-container");
 const header = document.querySelector("header")
-const lists = document.querySelectorAll("ul.list-container");
+const lists = document.querySelectorAll(".list-container");
 
 
 

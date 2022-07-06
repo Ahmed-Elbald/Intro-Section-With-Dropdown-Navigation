@@ -29,15 +29,15 @@
       <button class="close-menu">
         <img src="images/icon-close-menu.svg" alt="Close The Menu">
       </button>
-      <ul class="links">
-        <ul class="list-container right">
+      <div class="links">
+        <div class="list-container right">
           <div class="title">
             <span>features</span>
             <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
               <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4" />
             </svg>
           </div>
-          <div class="list">
+          <ul class="list">
             <li>
               <a href="#" target="_blank" rel="noopener noreferrer" aria-label="todo list" aria-hidden="true">
                 <img src="images/icon-todo.svg" alt="Todo List">
@@ -62,16 +62,16 @@
                 planning
               </a>
             </li>
-          </div>
-        </ul>
-        <ul class="list-container left">
+          </ul>
+        </div>
+        <div class="list-container left">
           <div class="title">
             <span>company</span>
             <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
               <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4" />
             </svg>
           </div>
-          <div class="list">
+          <ul class="list">
             <li>
               <a href="#" target="_blank" rel="noopener noreferrer" aria-label="history" aria-hidden="true">
                 history
@@ -87,31 +87,29 @@
                 blog
               </a>
             </li>
-          </div>
+          </ul>
+        </div>
+        <ul class="separate-ul">
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="careers" aria-hidden="true">
+              careers
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="about" aria-hidden="true">
+              about
+            </a>
+          </li>
         </ul>
-        <li>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="careers" aria-hidden="true">
-            careers
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="about" aria-hidden="true">
-            about
-          </a>
-        </li>
-      </ul>
-      <ul class="signing">
-        <button class="login">
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-hidden="true" aria-label="login">
-            login
-          </a>
-        </button>
-        <button class="register">
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-hidden="true" aria-label="register">
-            register
-          </a>
-        </button>
-      </ul>
+      </div>
+      <div class="signing">
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-hidden="true" aria-label="login">
+          login
+        </a>
+        <a class="register" href="#" target="_blank" rel="noopener noreferrer" aria-hidden="true" aria-label="register">
+          register
+        </a>
+      </div>
     </nav>
   </header>
   <main>
@@ -124,11 +122,9 @@
             Get your team in sync, no matter your location. Streamline processes,
             create team rituals, and watch productivity soar.
           </p>
-          <button>
-            <a href="#">
-              Learn more
-            </a>
-          </button>
+          <a href="#">
+            Learn more
+          </a>
         </div>
         <div class="clients-container">
           <img src="images/client-databiz.svg" alt="client databiz">
