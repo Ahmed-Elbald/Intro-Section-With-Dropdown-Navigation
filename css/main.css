@@ -57,7 +57,7 @@ button {
 
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .container {
     width: 90%;
   }
@@ -91,7 +91,7 @@ header::before {
   transition-duration: .5s;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   header {
     padding: 1em 2em;
   }
@@ -290,7 +290,7 @@ main {
   position: absolute;
   top: 0;
   min-height: 100vh;
-  padding-top: 5em;
+  padding-top: 8em;
   padding-bottom: 4em;
 
 }
@@ -317,12 +317,17 @@ main .img-cont {
   margin: 1em auto 3em;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   main .img-cont {
     background-image: url(../images/image-hero-desktop.png);
     order: 2;
-    height: 550px;
     max-width: 430px;
+  }
+}
+
+@media (min-width: 1000px) {
+  main .img-cont {
+    height: 500px;
   }
 }
 
@@ -372,7 +377,7 @@ main .container .clients-container img {
   transform: scaleX(1.7);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   main {
     height: 100vh;
   }
