@@ -174,6 +174,10 @@ nav.menu-container .links > li {
   cursor: pointer;
 }
 
+nav.menu-container .links .title * {
+  pointer-events: none;
+}
+
 nav.menu-container .links > .separate-ul li {
   padding: .4em;
 }
@@ -193,9 +197,6 @@ nav.menu-container .links .title svg {
   transition-duration: .5s;
 }
 
-nav.menu-container .links .title svg.up-down {
-  transform: rotate(180deg);
-}
 
 nav.menu-container .links .list-container .list {
   overflow: hidden;
@@ -209,6 +210,10 @@ nav.menu-container .links .list-container .list.expanding {
 
 nav.menu-container .links .list-container.expanding .list {
   max-height: 1000px;
+}
+
+nav.menu-container .list-container.expanding svg {
+  transform: rotate(180deg);
 }
 
 nav.menu-container .links .list-container .list li {

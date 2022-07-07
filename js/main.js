@@ -18,27 +18,29 @@ openMenuBtn.addEventListener("click", () => {
   })
 });
 
+document.addEventListener("click", (event) => {
 
-lists.forEach(element => {
-  element.children[0].addEventListener("click", _ => {
+  let clicked = event.target;
 
-    element.classList.toggle("expanding");
-    element.querySelector("svg").classList.toggle("up-down")
-    element.children[1].classList.toggle("expanding");
-    document.addEventListener("click", (event) => {
-      let result = isDescendant(element, event.target);
+  let currentDropdown = Array.from(lists).
+    filter(element => element.classList.contains("expanding"));
 
-      if (result == 0) {
-        element.classList.remove("expanding");
-        element.children[1].classList.remove("expanding");
-      }
-    });
-  });
+  if (currentDropdown.length == 1) removeCurrentDropdown()
 
-});
+  if (clicked.matches(".title")) {
+    let parent = clicked.closest(".list-container");
+    parent.classList.toggle("expanding");
+    parent.children[1].classList.toggle("expanding");
+  }
 
 
-
+  function removeCurrentDropdown() {
+    if (isDescendant(currentDropdown[0], clicked) == 0) {
+      currentDropdown[0].classList.remove("expanding")
+      currentDropdown[0].children[1].classList.toggle("expanding");
+    }
+  }
+})
 
 function isDescendant(parent, element) {
 
